@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陳偉倫的自我介紹</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f0f0f0;
             color: #333;
+            height: 120vh;
+            width: 100vw;
         }
 
         h1 {
             color: #2c3e50;
+            margin-top: 20px;
         }
 
         img {
@@ -32,16 +40,18 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            text-indent: 20px;
         }
 
         #intro p {
-            margin-left: 20px;
+            margin: 10px 0 10px 20px;
             font-size: 1.2em;
             text-align: left;
         }
 
         #best-word {
             margin-top: 20px;
+            margin-left: 20px;
             background-color: #bdc3c7;
             padding: 10px;
             border-radius: 5px;
@@ -51,6 +61,16 @@
             text-align: center;
             transform: translateX(-15px);
             color: rgb(0, 0, 120);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -62,13 +82,20 @@
         <div>
             <p>大家好，我是陳偉倫，來自台灣。</p>
             <p>我目前就讀壽山國小</p>
-            <p style="color: rgb(123, 20, 20); font-size: 1.6em;">臺語口說證照九級</p>
+            <p style="color: rgb(123, 20, 20); font-size: 1.6em;">臺語口說證照九級 ( 最強 )</p>
             <div id="best-word">
                 <h2 style="font-size: 2em;">名言 : </h2>
                 <p style="font-size: 1.5em;">國寶漫波曼波國寶</p>
             </div>
         </div>
     </section>
+
 </body>
+
+<footer>
+    <p>copyright &copy 2025 Yu-Teng Chou</p>
+</footer>
+
+
 
 </html>
