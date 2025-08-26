@@ -1,0 +1,98 @@
+{{ block "index" .}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳偉倫的自我介紹</title>
+    <link rel="icon" href="./image/ico.png">
+    <link rel="stylesheet" href="./css/style.css?v=1.2">
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+
+</head>
+
+<body>
+    <div>
+        <h1>我是陳偉倫 ( 台灣國語國寶 )</h1>
+    </div>
+    <section id="intro">
+        <img src="./image/image1.webp" alt="陳偉倫的圖片">
+        <div>
+            <p>大家好，我是陳偉倫，來自台灣。</p>
+            <p>我目前就讀壽山國小</p>
+            <p>我的肛門是正方形的</p>
+            <p style="color: rgb(123, 20, 20); font-size: 1.6em;">臺語口說證照九級 ( 最強 )</p>
+            <div id="best-word">
+                <h2 style="font-size: 2em;">名言 : </h2>
+                <p style="font-size: 1.5em;">國寶漫波曼波國寶</p>
+                <hr />
+                <p>喜欢妳的女孩子,才不会在意你开什么法拉利<br>
+                    犹豫就会败北, 真心就会白给<br>
+                    兄弟喜欢的我不碰, 兄弟看不上的让我来<br>
+                    二哈成不了狼, 舔狗上不了床</p>
+            </div>
+        </div>
+    </section>
+    <section id="gif">
+        <img src="./image/image2.gif" alt="陳偉倫的GIF圖片">
+    </section>
+
+    <section class="comment-section">
+        {{ template "commentForm" .Form }}
+        <hr />
+        {{ template "commentList" .Data }}
+    </section>
+</body>
+
+<footer>
+    <p>copyright &copy 2025 陳偉倫的爸爸</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        document.body.addEventListener('htmx:beforeSwap', function (evt) {
+            if (evt.detail.xhr.status === 422) {
+                evt.detail.shouldSwap = true;
+                evt.detail.isError = false;
+            }
+        });
+    });
+</script>
+
+</html>
+{{ end }}
+
+{{ block "commentForm" . }}
+<form hx-swap="outerHTML" hx-post="/comment">
+    名字: <input {{ if .Values.name }} value="{{ .Values.name }}" {{ end }} type="text" name="name" />
+    留言: <input {{ if .Values.comment }} value="{{ .Values.comment }}" {{ end }} type="text" name="comment" />
+    {{ if .Errors.comment }}
+    <div style="color: red"> {{ .Errors.comment }} </div>
+    {{ end }}
+    <button type="submit">送出</button>
+</form>
+
+
+{{ end }}
+
+{{ block "commentList" . }}
+<div id="comments">
+    {{ range .Comments }}
+    {{ template "comment" . }}
+    {{ end }}
+</div>
+{{ end }}
+
+{{ block "comment" . }}
+<div class="comment">
+    名字: <span>{{ .Name }}</span>
+    留言: <span>{{ .Comment }}</span>
+</div>
+{{ end }}
+
+{{ block "oob-comment" . }}
+<div id="comments" hx-swap-oob="afterbegin">
+    {{ template "comment" . }}
+</div>
+{{ end }}
