@@ -5,6 +5,7 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 	"html/template"
 	"io"
+	"os"
 )
 
 type Templates struct {
@@ -104,5 +105,5 @@ func main() {
 		return c.Render(200, "oob-comment", message)
 	})
 
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start(":" + os.Getenv("PORT")))
 }
