@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陳偉倫的自我介紹</title>
     <link rel="icon" href="./image/ico.png">
-    <link rel="stylesheet" href="./css/style.css?v=1.2">
+    <link rel="stylesheet" href="./css/style.css?v=1.1">
     <script src="https://unpkg.com/htmx.org@1.9.4"></script>
 
 </head>
@@ -38,6 +38,12 @@
         <img src="./image/image2.gif" alt="陳偉倫的GIF圖片">
     </section>
 
+    <section id="image-gallery">
+        <h2>圖片集錦</h2>
+        <hr />
+        {{ template "image-List" .Images }}
+    </section>
+
     <section class="comment-section">
         {{ template "commentForm" .Form }}
         <hr />
@@ -45,9 +51,7 @@
     </section>
 </body>
 
-<footer>
-    <p>copyright &copy 2025 陳偉倫的爸爸</p>
-</footer>
+{{ template "Footer" . }}
 
 <script>
     document.addEventListener("DOMContentLoaded", (event) => {
@@ -61,6 +65,27 @@
 </script>
 
 </html>
+{{ end }}
+
+{{ block "Footer" . }}
+<footer>
+    <p>copyright &copy 2025 陳偉倫的爸爸</p>
+</footer>
+{{ end }}
+
+{{ block "image-List" . }}
+<div id="image-grid">
+    {{ range .Images }}
+    {{ template "image-item" . }}
+    {{ end }}
+</div>
+{{ end }}
+
+{{ block "image-item" . }}
+<div class="image-item">
+    <img src="{{ .URL }}" alt="{{ .ALT }}">
+    <p>{{ .Description }}</p>
+</div>
 {{ end }}
 
 {{ block "commentForm" . }}
