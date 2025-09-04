@@ -111,6 +111,16 @@ func newImages() ImageList {
 				ALT:         "Image 5",
 				Description: "陳緯倫努力和麥克風培養感情",
 			},
+			{
+				URL:         "/image/image6.png",
+				ALT:         "Image 6",
+				Description: "陳緯倫參加節目飢餓遊戲時開啓野蠻模式",
+			},
+			{
+				URL:         "/image/image7.png",
+				ALT:         "Image 7",
+				Description: "陳緯倫在東南亞巡迴演唱會的盛況",
+			},
 		},
 	}
 }
