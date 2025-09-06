@@ -90,8 +90,8 @@
 
 {{ block "commentForm" . }}
 <form hx-swap="outerHTML" hx-post="/comment">
-    名字: <input {{ if .Values.name }} value="{{ .Values.name }}" {{ end }} type="text" name="name" />
-    留言: <input {{ if .Values.comment }} value="{{ .Values.comment }}" {{ end }} type="text" name="comment" />
+    <h2>名字:</h2> <input {{ if .Values.name }} value="{{ .Values.name }}" {{ end }} type="text" name="name" />
+    <h2>留言:</h2> <input {{ if .Values.comment }} value="{{ .Values.comment }}" {{ end }} type="text" name="comment" />
     {{ if .Errors.comment }}
     <div style="color: red"> {{ .Errors.comment }} </div>
     {{ end }}
