@@ -121,6 +121,11 @@ func newImages() ImageList {
 				ALT:         "Image 7",
 				Description: "陳緯倫在東南亞巡迴演唱會的盛況",
 			},
+			{
+				URL:         "/image/image8.jpg",
+				ALT:         "Image 8",
+				Description: "陳緯倫在錄音室專心錄製新專輯",
+			},
 		},
 	}
 }
