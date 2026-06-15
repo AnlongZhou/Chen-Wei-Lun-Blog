@@ -156,6 +156,14 @@ func main() {
 			return c.Render(422, "commentForm", formData)
 		}
 
+		if name == "" {
+			formData := newFormData()
+			formData.Values["comment"] = comment
+			formData.Errors["name"] = "Name cannot be empty"
+
+			return c.Render(422, "commentForm", formData)
+		}
+
 		message := newComment(name, comment)
 		page.Data.Comments = append(page.Data.Comments, message)
 
