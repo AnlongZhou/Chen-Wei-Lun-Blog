@@ -126,6 +126,16 @@ func newImages() ImageList {
 				ALT:         "Image 8",
 				Description: "陳緯倫在錄音室專心錄製新專輯",
 			},
+			{
+				URL:         "/image/image9.png",
+				ALT:         "Image 9",
+				Description: "陳緯倫化名藏身於臺灣某間大學",
+			},
+			{
+				URL:         "/image/image10.jpg",
+				ALT:         "Image 10",
+				Description: "陳緯倫被發現和緋聞戀人在餐廳親熱",
+			},
 		},
 	}
 }
