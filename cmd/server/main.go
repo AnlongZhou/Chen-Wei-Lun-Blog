@@ -1,10 +1,13 @@
 package main
 
 import (
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 	"html/template"
 	"io"
+	"log"
+	"os"
+
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 type Templates struct {
@@ -147,6 +150,12 @@ func main() {
 	e.Static("/css", "css")
 	e.Static("/image", "image")
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "5000"
+		log.Println("Port is not set, defaulting to 5000")
+	}
+
 	page := newPage()
 	e.Renderer = newTemplate()
 
@@ -181,5 +190,6 @@ func main() {
 		return c.Render(200, "oob-comment", message)
 	})
 
-	e.Logger.Fatal(e.Start(":5000"))
+	serverAddress := ":" + port
+	e.Logger.Fatal(e.Start(serverAddress))
 }
