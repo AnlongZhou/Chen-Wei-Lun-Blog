@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"io"
 	"log"
+	"mime"
 	"os"
 
 	"myWeb/assets"
@@ -151,6 +152,9 @@ func main() {
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.StaticFS("/assets", assets.FS)
+
+	mime.AddExtensionType(".webp", "image/webp")
+	mime.AddExtensionType(".gif", "image/gif")
 
 	port := os.Getenv("PORT")
 	if port == "" {
