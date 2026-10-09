@@ -93,52 +93,52 @@ func newImages() ImageList {
 	return ImageList{
 		Images: []Image{
 			{
-				URL:         "/image/image1.webp",
+				URL:         "/assets/image/image1.webp",
 				ALT:         "Image 1",
 				Description: "陳緯倫第一次學會唱歌",
 			},
 			{
-				URL:         "/image/image2.png",
+				URL:         "/assets/image/image2.png",
 				ALT:         "Image 2",
 				Description: "陳緯倫第一次參加歌唱比賽，就得到了冠軍",
 			},
 			{
-				URL:         "/image/image3.png",
+				URL:         "/assets/image/image3.png",
 				ALT:         "Image 3",
 				Description: "陳緯倫參加知名節目拍的宣傳照",
 			},
 			{
-				URL:         "/image/image4.png",
+				URL:         "/assets/image/image4.png",
 				ALT:         "Image 4",
 				Description: "陳緯倫第一次得到金曲獎最佳新人獎",
 			},
 			{
-				URL:         "/image/image5.png",
+				URL:         "/assets/image/image5.png",
 				ALT:         "Image 5",
 				Description: "陳緯倫努力和麥克風培養感情",
 			},
 			{
-				URL:         "/image/image6.png",
+				URL:         "/assets/image/image6.png",
 				ALT:         "Image 6",
 				Description: "陳緯倫參加節目飢餓遊戲時開啓野蠻模式",
 			},
 			{
-				URL:         "/image/image7.png",
+				URL:         "/assets/image/image7.png",
 				ALT:         "Image 7",
 				Description: "陳緯倫在東南亞巡迴演唱會的盛況",
 			},
 			{
-				URL:         "/image/image8.jpg",
+				URL:         "/assets/image/image8.jpg",
 				ALT:         "Image 8",
 				Description: "陳緯倫在錄音室專心錄製新專輯",
 			},
 			{
-				URL:         "/image/image9.png",
+				URL:         "/assets/image/image9.png",
 				ALT:         "Image 9",
 				Description: "陳緯倫化名藏身於臺灣某間大學",
 			},
 			{
-				URL:         "/image/image10.jpg",
+				URL:         "/assets/image/image10.jpg",
 				ALT:         "Image 10",
 				Description: "陳緯倫被發現和緋聞戀人在餐廳親熱",
 			},
