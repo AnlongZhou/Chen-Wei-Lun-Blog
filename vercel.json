@@ -1,10 +1,7 @@
 {
     "functions": {
         "cmd/server/main.go": {
-            "includeFiles": [
-                "views/**",
-                "image/**"
-            ]
+            "includeFiles": "views/**"
         }
     }
 }
