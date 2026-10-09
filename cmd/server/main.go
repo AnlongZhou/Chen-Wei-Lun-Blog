@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 
+	"myWeb/assets"
 	"myWeb/views"
 
 	"github.com/labstack/echo/v4"
@@ -149,8 +150,7 @@ func main() {
 
 	e := echo.New()
 	e.Use(middleware.Logger())
-	e.Static("/css", "css")
-	e.Static("/image", "image")
+	e.StaticFS("/assets", assets.FS)
 
 	port := os.Getenv("PORT")
 	if port == "" {
