@@ -143,6 +143,11 @@ func newImages() ImageList {
 				ALT:         "Image 10",
 				Description: "陳緯倫被發現和緋聞戀人在餐廳親熱",
 			},
+			{
+				URL:         "/assets/image/image11.jpg",
+				ALT:         "Image 11",
+				Description: "陳緯倫在美國參加葛萊美獎頒獎典禮",
+			},
 		},
 	}
 }
