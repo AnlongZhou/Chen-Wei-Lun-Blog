@@ -148,6 +148,11 @@ func newImages() ImageList {
 				ALT:         "Image 11",
 				Description: "陳緯倫在美國參加葛萊美獎頒獎典禮",
 			},
+			{
+				URL:         "/assets/image/image12.png",
+				ALT:         "Image 12",
+				Description: "陳偉倫在臺中開演唱會跟粉絲們合照",
+			},
 		},
 	}
 }
