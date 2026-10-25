@@ -133,6 +133,39 @@ h1 {
     border-radius: 5px;
 }
 
+#video-gallery h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+#video-gallery hr {
+    width: 80%;
+    margin: 10px auto 20px auto;
+    border: 1px solid #bdc3c7;
+}
+
+#video-grid {
+    column-count: 3;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.video-item {
+    margin: 0 auto 20px auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.video-item video {
+    display: inline;
+    width: 100%;
+    object-fit: cover;
+}
+
 #image-gallery h2 {
     text-align: center;
     margin-top: 40px;

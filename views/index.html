@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陳偉倫的自我介紹</title>
     <link rel="icon" href="./assets/image/ico.png">
-    <link rel="stylesheet" href="/assets/css/style.css?v=1.4">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://unpkg.com/htmx.org@1.9.4"></script>
 
 </head>
@@ -36,6 +36,12 @@
     </section>
     <section id="gif">
         <img src="./assets/image/image2.gif" alt="陳偉倫的GIF圖片">
+    </section>
+
+    <section id="video-gallery">
+        <h2>影片</h2>
+        <hr />
+        {{ template "video-list" .Videos }}
     </section>
 
     <section id="image-gallery">
@@ -71,6 +77,23 @@
 <footer>
     <p>copyright &copy 2026 陳偉倫的爸爸</p>
 </footer>
+{{ end }}
+
+{{ block "video-list" . }}
+<div id="video-grid">
+    {{ range .Videos }}
+    {{ template "video-item" . }}
+    {{ end }}
+</div>
+{{ end }}
+
+{{ block "video-item" . }}
+<div class="video-item">
+    <video controls>
+        <source src="{{ .URL }}" type="video/mp4">
+    </video>
+    <p>{{ .Description }}</p>
+</div>
 {{ end }}
 
 {{ block "image-List" . }}

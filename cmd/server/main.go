@@ -68,6 +68,7 @@ type Page struct {
 	Data   Data
 	Form   FormData
 	Images ImageList
+	Videos VideoList
 }
 
 func newPage() Page {
@@ -75,6 +76,7 @@ func newPage() Page {
 		Data:   newData(),
 		Form:   newFormData(),
 		Images: newImages(),
+		Videos: newVideos(),
 	}
 }
 
@@ -88,6 +90,30 @@ type Images = []Image
 
 type ImageList struct {
 	Images Images
+}
+
+type Video struct {
+	URL         string
+	ALT         string
+	Description string
+}
+
+type Videos = []Video
+
+type VideoList struct {
+	Videos Videos
+}
+
+func newVideos() VideoList {
+	return VideoList{
+		Videos: []Video{
+			{
+				URL:         "/assets/video/video1.mp4",
+				ALT:         "Video 1",
+				Description: "陳緯倫在演唱會上深情演唱幾分之幾，臺下觀眾也熱情回應",
+			},
+		},
+	}
 }
 
 func newImages() ImageList {
