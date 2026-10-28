@@ -179,6 +179,11 @@ func newImages() ImageList {
 				ALT:         "Image 12",
 				Description: "陳偉倫在臺中開演唱會跟粉絲們合照",
 			},
+			{
+				URL:         "/assets/image/image13.png",
+				ALT:         "Image 13",
+				Description: "陳緯倫成為耶路撒冷帶來和平",
+			},
 		},
 	}
 }
